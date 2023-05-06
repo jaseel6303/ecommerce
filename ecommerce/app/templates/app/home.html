@@ -1,6 +1,35 @@
 {% extends 'app/base.html' %}
 {% load static %}
+
 {% block  title %}Home{% endblock title %}
+
+{% block  banner-slider %}
+<section class="row" >
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/carousel/photo_2023-05-06_13-06-27.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/carousel/photo_2023-05-06_13-15-20.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/carousel/photo_2023-05-06_13-15-33.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/carousel/photo_2023-05-06_13-15-37.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/carousel/photo_2023-05-06_13-15-40.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+
+{% endblock banner-slider %}
+
 {% block main-content%}
-    <h1>Welcome</h1>
+    
 {% endblock main-content%}

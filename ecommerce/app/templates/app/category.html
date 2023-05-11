@@ -16,8 +16,9 @@
             <div class="col-sm-9">
                 <div class="row">
                     {% for prod in product %}
+
                         <div class="col text-center mb-4">
-                            <a href="#" class="btn">
+                            <a href="{% url 'product-detail' prod.id %}" class="btn">
                             <div>
                                 <img src="{{prod.product_image.url}}" width="300px" height="200px">
                                 <div class="fw-bold">{{prod.title}}</div>
@@ -28,6 +29,7 @@
                             </div>
                             </a>
                         </div>
+
                     {% endfor %}
                 </div>
 

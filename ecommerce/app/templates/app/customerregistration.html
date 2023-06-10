@@ -20,7 +20,7 @@
                     <input type="submit" value="Submit" class="btn btn-primary"><br>
 
                     <div class="text-center text-primary fw-bold">
-                        <small>Existing User ? <a href="#" class="text-danger">Login Now</a></small>
+                        <small>Existing User ? <a href="{% url 'login' %}" class="text-danger">Login Now</a></small>
                     </div>
 
                     <!--if any error-->
@@ -30,6 +30,7 @@
                         {% endfor %}
                     {% endif %}
 
+                    <!--success-->
                     {% if messages %}
                         {% for msg in messages %}
                             <div class="alert alert-{{msg.tags}}" role="alert">

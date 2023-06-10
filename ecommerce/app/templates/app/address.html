@@ -15,7 +15,7 @@
             </ul>
         </div>
 
-        <div class="col-sm-8 offset-sm-1">
+        <div class="col-sm-9 offset-sm-1">
             <div class="row">
                 {% for ad in addr %}
                 <div class="col-sm-6">
@@ -28,7 +28,7 @@
                             <p>City: {{ad.city}}</p>
                             <p>State: {{ad.state}}</p>
                             <p>Pincode: {{ad.pincode}}</p>
-                            <p class="text-center"><a href="#" type="button" class="btn btn-success">Update</a></p>
+                            <p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" type="button" class="btn btn-success">Update</a></p>
                         </div>
                     </div>
                 </div>

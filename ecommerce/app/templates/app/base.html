@@ -57,13 +57,13 @@
           
             <li class="nav-item dropdown" style="list-style-type: none;">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               User
+               {{request.user}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                 <li><a class="dropdown-item" href="#">Orders</a></li>
                 <li><a class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
               </ul>
             </li>
             <li class="nav-item mx-2" style="list-style-type: none;">

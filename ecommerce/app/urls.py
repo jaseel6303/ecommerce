@@ -18,6 +18,12 @@ urlpatterns = [
     path('updateAdress/<int:pk>', views.updateAddress.as_view(), name='updateAddress'),
 
 
+    path('add-to-cart/',views.add_to_cart, name='add-to-cart'),
+    path('cart/',views.show_cart, name='showcart'),
+    path('checkout/',views.show_cart, name='checkout'),
+
+
+
     path('registration/',views.CustomerRegistrationView.as_view(),name='customerregistration'),
 
     path('accounts/login/', auth_view.LoginView.as_view(template_name='app/login.html',authentication_form=LoginForm) , name='login'),
@@ -29,7 +35,7 @@ urlpatterns = [
 
     path('logout/',auth_view.LogoutView.as_view(next_page='login'), name='logout'),
 
-    
+
 
     path('password-reset/',auth_view.PasswordResetView.as_view(template_name='app/password_reset.html',form_class=MyPasswordResetForm), name='password_reset'),
 

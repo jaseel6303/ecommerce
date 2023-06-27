@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'app/css/style_1.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.6.0/jquery.json.min.js" integrity="sha512-QE2PMnVCunVgNeqNsmX6XX8mhHW+OnEhUhAWxlZT0o6GFBJfGRCfJ/Ut3HGnVKAxt8cArm7sEqhq2QdSF0R7VQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
     <div class="row" style="background-color: #16c8af">
@@ -63,13 +64,13 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Orders</a></li>
+                <li><a class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
                 <li><a class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a></li>
                 <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
               </ul>
             </li>
             <li class="nav-item mx-2" style="list-style-type: none;">
-                <a href="#" class="nav-link text-white">Cart</a>
+                <a href="{% url 'showcart' %}" class="nav-link text-white">Cart</a>
             </li>
             <li class="nav-item mx-2" style="list-style-type: none;">
               <a href="#" class="nav-link text-white">Wishlist</a>
@@ -91,7 +92,7 @@
     {% block carousel %}{% endblock carousel %}
     {% block welcome-message %}{% endblock welcome-message %}
     {% block main-content %}{% endblock main-content %}
-    
+    {% block payment-gateway %}{% endblock payment-gateway %}
 
 
     <!--footer-->

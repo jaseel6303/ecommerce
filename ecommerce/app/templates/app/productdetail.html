@@ -17,11 +17,23 @@
                 <ul class="fs-5" style="font-family: 'Courier New', Courier, monospace;">
                     <li>{{product.description}}</li>
                 </ul>
-                <form action="/add-to-cart" class="d-inline">
-                    <input type="hidden" name="prod_id" value="{{product.id}}">
-                    <button type="submit" class="btn btn-primary shadow px-5 py-2">Add to Cart</button>
-                </form>
-                <a href="{% url 'showcart' %}" class="btn btn-warning shadow px-5 py-2 ms-4">Buy Now</a>
+                <div class="px-5">
+                    
+                    <form action="/add-to-cart" class="d-inline">
+                        <input type="hidden" name="prod_id" value="{{product.id}}">
+                        <button type="submit" class="btn btn-primary shadow ">Add to Cart</button>
+                    </form>
+                    <a href="{% url 'showcart' %}" class="btn btn-warning shadow ">Buy Now</a>
+    
+    
+                    {% if wishlist %}
+                     <a pid={{product.id}} class="minus-wishlist btn btn-danger shadow "><i class="fas fa-heart fa-lg"></i></a>
+                    {% else %}
+                     <a pid={{product.id}} class="plus-wishlist btn btn-success shadow "><i class="fas fa-heart fa-lg"></i></a>
+                    {% endif %}
+                </div><br><br><br>
+                
+
 
             </div>
         </div>

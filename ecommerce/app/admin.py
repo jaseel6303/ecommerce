@@ -2,6 +2,7 @@ from django.contrib import admin
 from . models import Cart, OrderPlaced, Payment, Product,Customer, Wishlist
 from django.utils.html import format_html
 from django.urls import reverse
+from django.contrib.auth.models import Group
 
 # Register your models here.
 
@@ -50,3 +51,6 @@ class WishlistModelAdmin(admin.ModelAdmin):
     def products(self,obj):
         link = reverse("admin:app_product_change",args=[obj.product.pk])
         return format_html('<a href="{}">{}</a>',link, obj.product.title)
+    
+
+admin.site.unregister(Group)

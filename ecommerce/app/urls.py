@@ -17,6 +17,9 @@ urlpatterns = [
     path('profile/',views.ProfileView.as_view(), name='profile'),
     path('address/',views.address, name='address'),
     path('updateAdress/<int:pk>', views.updateAddress.as_view(), name='updateAddress'),
+    path('termsandconditions/', views.termsandconditions,name="termsandconditions"),
+    path('returnandrefund/', views.returnandrefund,name="returnandrefund"),
+
 
 
     path('add-to-cart/',views.add_to_cart, name='add-to-cart'),

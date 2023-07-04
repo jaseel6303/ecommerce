@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row my-3">
             <div class="col-sm-6  offset-sm-3">
-                <h4>Customer Registration</h4>
+                <h4 class="text-center">Customer Registration</h4>
                 <hr>
                 <form action="" method="post" novalidate class="shadow p-5">
 
@@ -18,6 +18,9 @@
                     {% endfor %}
 
                     <input type="submit" value="Submit" class="btn btn-primary"><br>
+
+                    <a href="{% url 'termsandconditions' %}" >Terms and Conditions</a><br><br>
+
 
                     <div class="text-center text-primary fw-bold">
                         <small>Existing User ? <a href="{% url 'login' %}" class="text-danger">Login Now</a></small>

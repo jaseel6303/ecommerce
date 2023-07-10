@@ -411,3 +411,29 @@ def returnandrefund(request):
     return render(request,"app/return&refund.html",locals())
 
 
+def privacypolicy(request):
+    totalitem = 0
+    wishitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+        wishitem = len(Wishlist.objects.filter(user=request.user))
+    return render(request,"app/privacypolicy.html",locals())
+
+
+
+def cancellationandrefund(request):
+    totalitem = 0
+    wishitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+        wishitem = len(Wishlist.objects.filter(user=request.user))
+    return render(request,"app/cancellationandrefund.html",locals())
+
+
+def shippinganddelivery(request):
+    totalitem = 0
+    wishitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+        wishitem = len(Wishlist.objects.filter(user=request.user))
+    return render(request,"app/shippinganddelivery.html",locals())

@@ -19,6 +19,11 @@ urlpatterns = [
     path('updateAdress/<int:pk>', views.updateAddress.as_view(), name='updateAddress'),
     path('termsandconditions/', views.termsandconditions,name="termsandconditions"),
     path('returnandrefund/', views.returnandrefund,name="returnandrefund"),
+    path('privacypolicy/', views.privacypolicy,name="privacypolicy"),
+    path('cancellationandrefund/', views.cancellationandrefund,name="cancellationandrefund"),
+    path('shippinganddelivery/', views.shippinganddelivery,name="shippinganddelivery"),
+
+   
 
 
 
